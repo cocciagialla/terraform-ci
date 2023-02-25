@@ -13,3 +13,7 @@ resource "kubectl_manifest" "ci_user_role" {
 resource "kubectl_manifest" "ci_user_cluster_role_binding" {
   yaml_body = file("${path.module}/confs/ci-user-cluster-role-binding.yaml")
 }
+
+resource "kubectl_manifest" "ci_user_secret" {
+  yaml_body = file("${path.module}/confs/ci-user-secret.yaml")
+}
