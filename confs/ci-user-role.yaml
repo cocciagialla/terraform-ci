@@ -23,6 +23,7 @@ rules:
     - apiGroups:
           - batch
       resources:
+          - cronjobs
           - jobs
       verbs:
           - create
@@ -98,6 +99,7 @@ rules:
           - traefik.containo.us
       resources:
           - ingressroutes
+          - ingressroutetcps
           - middlewares
       verbs:
           - create
